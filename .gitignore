@@ -51,6 +51,12 @@ coverage.xml
 .pytest_cache/
 cover/
 
+*/migrations/
+*/migrations/*.py
+staticfiles
+staticfiles/
+static
+static/
 # Translations
 *.mo
 *.pot
@@ -64,7 +70,8 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
-
+static/
+staticfiles/
 # Scrapy stuff:
 .scrapy
 
