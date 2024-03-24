@@ -16,7 +16,7 @@ __pycache__
 Dockerfile
 docker-compose.yml
 staticfiles
-static 
+
 media
 
 # Ignore other project-specific files
