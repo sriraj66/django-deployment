@@ -9,7 +9,21 @@
 </head>
 <body>
     
-    <h1>Hello World</h1>
+    <h1>Add Student</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <h1>Student List</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} - {{ student.roll }} - {% if student.profile %}
+                <a href="{{student.profile.url}}" target="_blank">link</a>
+            {% endif %}</li>
+        {% endfor %}
+    </ul>
 
     <h2>{% static 'script.js' %}</h2>
     <script src="{% static 'script.js' %}" ></script>
